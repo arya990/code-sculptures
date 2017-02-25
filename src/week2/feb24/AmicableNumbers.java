@@ -5,7 +5,7 @@ package week2.feb24;
 public class AmicableNumbers {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		int number = 10000;
 		int number1 = 0, number2 = 0;
