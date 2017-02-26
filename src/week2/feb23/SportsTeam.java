@@ -7,7 +7,7 @@ class Sports {
 
 		return "Generic Sports";
 	}
-
+	
 	void getNumberOfTeamMembers() {
 		System.out.println("Each team has n players in " + getName());
 	}
@@ -30,11 +30,11 @@ public class SportsTeam {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Sports s = new Sports();
-		s.getName();
+		System.out.println(s.getName());
 		s.getNumberOfTeamMembers();
 
 		Soccer so = new Soccer();
-		so.getName();
+		System.out.println(so.getName());
 		so.getNumberOfTeamMembers();
 	}
 
