@@ -1,3 +1,4 @@
+
 package week2.feb22;
 //A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a2 + b2 = c2
 

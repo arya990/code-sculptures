@@ -10,30 +10,40 @@ public class Numberoflettersin1000 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int day = 1;
-		switch (day) {
-		case 1:
-			System.out.println("monday");
-			break;
-		case 2:
-			System.out.println("tuesday");
-			break;
-		case 3:
-			System.out.println("wednesday");
-			break;
-		case 4:
-			System.out.println("thursday");
-			break;
-		case 5:
-			System.out.println("friday");
-			break;
-		case 6:
-			System.out.println("staurday");
-			break;
-		case 7:
-			System.out.println("sunday");
+		String base[] = { "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
+				"twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+		String basetens[] = { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+		String basehundreds[] = { "", "onehundred", "twohundred", "threehundred", "fourhundred", "fivehundred",
+				"sixhundred", "sevenhundred", "eighthundred", "ninehundred", "oneThousand" };
+		String number = " ";
+		int sum = 0;
+		for (int i = 666; i <= 666; i++) {
+			if (i <= 19) {
+				number = base[i];
+			} else if (i > 19 && i < 100) {
+				int tens = (i / 10);
+				int ones = i % 10;
+				number = basetens[tens] + base[ones];
+			} else {
+				int hundreds = i / 100;
+				int rem = i % 100;
+				if (rem == 0) {
+					number = basehundreds[hundreds];
+				} else if (rem > 19) {
+					int tens = (i / 10) % 10;
+					int ones = i % 10;
+					number = basehundreds[hundreds] + "and" + basetens[tens] + base[ones];
+				} else {
+					number = basehundreds[hundreds] + "and" + base[rem];
+				}
+			}
+
+			sum = sum + number.length();
+
+			 System.out.println(number);
 
 		}
+		System.out.println(sum);
 	}
 
 }
