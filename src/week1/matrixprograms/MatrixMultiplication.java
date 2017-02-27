@@ -35,7 +35,7 @@ public class MatrixMultiplication {
 				}
 			}
 			for (int i = 0; i < w; i++) {
-				for (int j = i; j < z; j++) {
+				for (int j = 0; j < z; j++) {
 					for (int k = 0; k < x; k++) {
 						sum = sum + a[i][k] * b[k][j];
 					}
