@@ -69,3 +69,20 @@ public class ProgramonOOPS {
 	}
 
 }
+/*
+For handling negative or decimal inputs, place the below code in place of Line#39:
+String input = in.nextLine(); //Accept the user input as String and later we can convert it into Integer
+int ch = Integer.parseInt(input); //This line throws NumberFormatException, if the number has bad characters
+if (ch < 0) //Explicitly throw NumberFormatException with the message
+else //Continue your logic
+
+
+Rounding to 3 digits:
+Please use Math.round() method to round the decimal to nearest integer.
+But for rounding it to 3 digits after decimals, multiply the number with 1000.0 and divide it with 1000.0 as below:
+Ex:
+double d = 2.345732;
+System.out.println(Math.round(d * 1000.0)/1000.0);
+Output:
+2.346
+*/
