@@ -1,4 +1,5 @@
 package week3.feb27;
+
 /*You are given following Data points:
 Userid
 Movieid
@@ -46,12 +47,12 @@ public class ModelClass {
 	}
 
 	public static void main(String[] args) {
-		ModelClass m=new ModelClass();
+		ModelClass m = new ModelClass();
 		m.setUserId(111);
 		m.setMovieid("ismail");
 		m.setRating(3);
 		m.setTimestamp(2);
-		
+
 		System.out.println(m.getUserId());
 		System.out.println(m.getMovieid());
 		System.out.println(m.getRating());

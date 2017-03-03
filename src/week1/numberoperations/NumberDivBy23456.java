@@ -49,8 +49,8 @@ public class NumberDivBy23456 {
 								finalnumber = number;
 								System.out.println(
 										"Time took for Computation:\t" + (System.currentTimeMillis() - startTime));
-								System.out.println(finalnumber);
-//								break;
+//								System.out.println(finalnumber);
+								break;
 							}
 						} else {
 							number++;
@@ -65,7 +65,7 @@ public class NumberDivBy23456 {
 				number++;
 			}
 		}
-//		System.out.println(finalnumber);
+		System.out.println(finalnumber);
 	}
 
 }
