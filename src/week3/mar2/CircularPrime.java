@@ -5,13 +5,16 @@ import java.util.ArrayList;
 public class CircularPrime {
 
 	public static void main(String[] args) {
+		//int z=0;
 		ArrayList<Long> a = new ArrayList<Long>();
 		for (long i = 79; i <= 100; i++) {
 			if (!a.contains(i)) {
 				long c = 0;
-				for (long j = 1; j <= Math.sqrt(i); j++) {
+				for (long j = 1; j <= i; j++) {
 					if (i % j == 0) {
-						c++;
+						c++;      
+						
+						
 					}
 				}
 				if (c == 1) {
