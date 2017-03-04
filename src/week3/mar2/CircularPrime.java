@@ -5,44 +5,46 @@ import java.util.ArrayList;
 public class CircularPrime {
 
 	public static void main(String[] args) {
-		//int z=0;
+		int z = 0;
 		ArrayList<Long> a = new ArrayList<Long>();
-		for (long i = 79; i <= 100; i++) {
+		for (long i = 1; i <= 100000; i++) {
 			if (!a.contains(i)) {
 				long c = 0;
 				for (long j = 1; j <= i; j++) {
 					if (i % j == 0) {
-						c++;      
-						
-						
+						c++;
 					}
 				}
-				if (c == 1) {
+				if (c == 2) {
 					// System.out.println(i);
 					long num = i;
 					long rev = 0;
+				 
 					while (num > 0) {
-						
+
 						rev = rev * 10;
 						rev = rev + num % 10;
 						num = num / 10;
 					}
 					int d = 0;
-					for (long j = 1; j <= Math.sqrt(rev); j++) {
+					for (long j = 1; j <= rev; j++) {
 						if (rev % j == 0) {
 							d++;
 						}
-						if (d == 1) {
-							a.add(i);
-							a.add(rev);
-
-							System.out.println(i + "  " + rev);
-						}
 					}
+					if (d == 2) {
+						a.add(i);
+						a.add(rev);
+
+						// System.out.println(i + " " + rev);
+						z++;
+					}
+
 				}
 			}
 		}
-		// System.out.println(a.get(0));
+		// System.out.println(a);
+		System.out.println(z);
 
 	}
 }
