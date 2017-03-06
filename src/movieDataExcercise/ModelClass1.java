@@ -1,4 +1,4 @@
-package MovieDataExcercise;
+package movieDataExcercise;
 import java.util.Date;
 
 /*You are given following Data points:
@@ -49,7 +49,7 @@ public class ModelClass1 {
 			}
 
 			public static void main(String[] args) {
-				ModelClass m = new ModelClass();
+				ModelClass1 m = new ModelClass1();
 				m.setUserId(111);
 				m.setMovieid(1);
 				m.setRating(3);

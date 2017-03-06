@@ -1,4 +1,4 @@
-package MovieDataExcercise;
+package movieDataExcercise;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
