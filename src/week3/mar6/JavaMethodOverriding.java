@@ -11,10 +11,11 @@ class Sports {
 }
 
 class Soccer extends Sports {
-	@Override 
+	@Override
 	String getName() {
 		return "Soccer";
 	}
+
 	@Override
 	void getNumberOfTeamMembers() {
 		System.out.println("Each team has n players in " + getName());
@@ -22,20 +23,19 @@ class Soccer extends Sports {
 }
 
 class Volleyball extends Sports {
-	@Override 
+	@Override
 	String getName() {
 		return "Volleyball";
 	}
+
 	@Override
 	void getNumberOfTeamMembers() {
 		System.out.println("Each team has 6 players in " + getName());
 	}
 }
+
 class Cricket extends Sports {
-	@Override 
-	String getName() {
-		return "Cricket";
-	}
+
 	@Override
 	void getNumberOfTeamMembers() {
 		System.out.println("Each team has 11 players in " + getName());
@@ -45,10 +45,10 @@ class Cricket extends Sports {
 public class JavaMethodOverriding {
 
 	public static void main(String[] args) {
-		Sports sports=new Sports();
-		Soccer soccer=new Soccer();
-		Volleyball volleyball=new Volleyball();
-		Cricket cricket= new Cricket();
+		Sports sports = new Sports();
+		Soccer soccer = new Soccer();
+		Volleyball volleyball = new Volleyball();
+		Cricket cricket = new Cricket();
 		System.out.println(sports.getName());
 		sports.getNumberOfTeamMembers();
 		System.out.println(soccer.getName());
