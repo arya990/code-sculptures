@@ -1,6 +1,8 @@
 package week3.feb28;
 
 import java.util.ArrayDeque;
+//By reading a List of Numbers, explore all the methods in following classes
+//ArrayDeque
 
 public class ArrayDequeimplementation {
 

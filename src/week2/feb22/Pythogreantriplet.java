@@ -17,8 +17,7 @@ public class Pythogreantriplet {
 					if (a + b + c == 1000) {
 						if ((a * a) + (b * b) == (c * c)) {
 							product = a * b * c;
-							// System.out.println("the numbers are:"+" "+a+"
-							// "+b+" "+c);
+							 System.out.println("the numbers are:"+" "+a+" "+b+" "+c);
 							// System.out.println(product);
 							break;
 						}

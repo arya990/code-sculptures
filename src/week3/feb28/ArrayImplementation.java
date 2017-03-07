@@ -4,6 +4,8 @@ package week3.feb28;
 import java.util.Arrays;
 //import java.util.List;
 
+//By reading a List of Numbers, explore all the methods in following classes
+//Array
 public class ArrayImplementation {
 
 	public static void main(String[] args) {

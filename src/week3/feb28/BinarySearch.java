@@ -1,6 +1,7 @@
 package week3.feb28;
 
 import java.util.Scanner;
+//Write code for Binary Search on a list of numbers
 
 public class BinarySearch {
 
@@ -34,7 +35,6 @@ public class BinarySearch {
 			}
 		}
 		System.out.println("element not found");
-
 
 		in.close();
 	}

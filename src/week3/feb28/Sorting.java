@@ -1,7 +1,11 @@
 package week3.feb28;
 
 import java.util.Scanner;
-
+/*Write code for Following Sorting Algorithms
+Insertion Sort
+Selection Sort
+Bubble Sort
+*/
 public class Sorting {
 
 	public static void insertionSort(int a[])

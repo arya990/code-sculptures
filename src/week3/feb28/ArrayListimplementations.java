@@ -1,5 +1,7 @@
 package week3.feb28;
 import java.util.*;
+//By reading a List of Numbers, explore all the methods in following classes
+//ArrayList
 public class ArrayListimplementations {
 
 	public static void main(String[] args) {

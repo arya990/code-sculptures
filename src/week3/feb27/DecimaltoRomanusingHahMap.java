@@ -2,6 +2,7 @@ package week3.feb27;
 
 import java.util.HashMap;
 import java.util.Scanner;
+//You have written a program for Decimal to Roman, vice versa. Rewrite the same program by using HashMap
 
 public class DecimaltoRomanusingHahMap {
 
