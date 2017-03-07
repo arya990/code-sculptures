@@ -17,7 +17,7 @@ public class CharArrayReaderWriterImplementation {
 				System.out.println(value);
 			}
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 	}
 

@@ -33,7 +33,9 @@ public class BufferedReaderWriterImplementation {
 			String content = "ismail";
 			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("E:\\workspace\\textfile\\newfile.txt"));
 			bufferedWriter.write(content);
+			bufferedWriter.close();
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
