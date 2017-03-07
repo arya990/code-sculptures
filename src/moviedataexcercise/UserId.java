@@ -1,4 +1,4 @@
-package movieDataExcercise;
+package moviedataexcercise;
 
 public class UserId {
 

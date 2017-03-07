@@ -1,4 +1,4 @@
-package movieDataExcercise;
+package moviedataexcercise;
 import java.util.Date;
 
 /*You are given following Data points:
