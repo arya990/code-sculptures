@@ -1,5 +1,7 @@
 package week3.feb27;
 
+import java.util.Date;
+
 /*You are given following Data points:
 Userid
 Movieid
@@ -10,9 +12,9 @@ Model  a class based on above parameters
 public class ModelClass {
 
 	private int Userid;
-	private String movieid;
-	private int rating;
-	private int timestamp;
+	private int  movieid;
+	private double rating;
+	private Date timestamp;
 
 	public void setUserId(int Userid) {
 		this.Userid = Userid;
@@ -22,36 +24,36 @@ public class ModelClass {
 		return Userid;
 	}
 
-	public void setMovieid(String movieid) {
+	public void setMovieid(int movieid) {
 		this.movieid = movieid;
 	}
 
-	public String getMovieid() {
+	public int getMovieid() {
 		return movieid;
 	}
 
-	public void setRating(int rating) {
+	public void setRating(double rating) {
 		this.rating = rating;
 	}
 
-	public int getRating() {
+	public double getRating() {
 		return rating;
 	}
 
-	public void setTimestamp(int timestamp) {
+	public void setTimestamp(Date timestamp) {
 		this.timestamp = timestamp;
 	}
 
-	public int getTimestamp() {
+	public Date getTimestamp() {
 		return timestamp;
 	}
 
 	public static void main(String[] args) {
 		ModelClass m = new ModelClass();
 		m.setUserId(111);
-		m.setMovieid("ismail");
+		m.setMovieid(1);
 		m.setRating(3);
-		m.setTimestamp(2);
+		
 
 		System.out.println(m.getUserId());
 		System.out.println(m.getMovieid());
