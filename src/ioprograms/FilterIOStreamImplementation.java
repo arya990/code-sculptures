@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.FilterInputStream;
 import java.io.IOException;
 
+//FilterIOStreamImplementation
 public class FilterIOStreamImplementation {
 
 	@SuppressWarnings("resource")
@@ -15,8 +16,7 @@ public class FilterIOStreamImplementation {
 		int i = 0;
 		char c;
 		try {
-			FilterInputStream fis = new BufferedInputStream(
-					new FileInputStream("E:\\workspace\\textfile\\tasks.txt"));
+			FilterInputStream fis = new BufferedInputStream(new FileInputStream("E:\\workspace\\textfile\\tasks.txt"));
 			while ((i = fis.read()) != -1) {
 				c = (char) i;
 				System.out.print(c);

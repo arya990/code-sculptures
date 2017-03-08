@@ -2,6 +2,7 @@ package ioprograms;
 
 import java.io.CharArrayReader;
 
+//CharArrayReaderWriterImplementation
 public class CharArrayReaderWriterImplementation {
 
 	public static void main(String[] args) {
@@ -12,8 +13,8 @@ public class CharArrayReaderWriterImplementation {
 			ch1 = new CharArrayReader(ch);
 			int value = 0;
 			while ((value = ch1.read()) != -1) {
-				char c = (char)value;
-				System.out.println(c+" : ");
+				char c = (char) value;
+				System.out.println(c + " : ");
 				System.out.println(value);
 			}
 		} catch (Exception e) {

@@ -1,4 +1,5 @@
 package week3.mar3;
+
 /*If p is the perimeter of a right angle triangle with integral length sides, {a,b,c}, there are exactly three solutions for p = 120.
 
 {20,48,52}, {24,45,51}, {30,40,50}
@@ -9,25 +10,29 @@ public class RightAngleTriangleMaxSolutions {
 
 	public static void main(String[] args) {
 
-		int a = 1, b = 1, c = 1;
-		long product = 1;
-		for (int i = 1; i < 500; i++) {
-			a = i;
-			for (int j = 1; j < 500; j++) {
-				b = j;
-				for (int k = 1; k < 500; k++) {
-					c = k;
-					if (a + b + c == 1000) {
-						if ((a * a) + (b * b) == (c * c)) {
-							product = a * b * c;
-							 System.out.println("the numbers are:"+" "+a+" "+b+" "+c);
-//							 System.out.println(product);
-							break;
-						}
-					}
-				}
+		int maxPerimeter = 0;
+		int maxTriangle = 0;
+		for (int p = 1; p <= 1000; p++) {
+			int triangles = count(p);
+			if (triangles > maxTriangle) {
+				maxTriangle = triangles;
+				maxPerimeter = p;
 			}
+		}
+		System.out.println(maxPerimeter);
+
 	}
 
+	private static int count(int p) {
+		int count = 0;
+		for (int i = 1; i <= p; i++) {
+			for (int j = i; j <= p; j++) {
+				int c = p - i - j;
+				if (j <= c && i * i + j * j == c * c) {
+					count++;
+				}
+			}
+		}
+		return count;
 	}
 }

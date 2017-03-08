@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+//BufferIOStreamImplementation
 public class BufferIOStreamImplementation {
 
 	@SuppressWarnings({ "resource", "deprecation" })
@@ -30,15 +31,15 @@ public class BufferIOStreamImplementation {
 
 		}
 		try {
-		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("E:\\workspace\\textfile\\output.txt"));
+			BufferedOutputStream bos = new BufferedOutputStream(
+					new FileOutputStream("E:\\workspace\\textfile\\output.txt"));
 			bos.write("ismail basha".getBytes());
 			bos.close();
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 }
