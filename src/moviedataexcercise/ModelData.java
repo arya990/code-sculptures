@@ -1,7 +1,5 @@
 package moviedataexcercise;
 
-import java.util.Date;
-
 /*You are given following Data points:
 		Userid
 		Movieid
@@ -9,12 +7,13 @@ import java.util.Date;
 		timestamp
 		Model  a class based on above parameters
 		*/
-public class ModelClass1 {
+public class ModelData {
 
 	private int Userid;
 	private int movieid;
 	private double rating;
-	private Date timestamp;
+	private double junk;
+	private String timestamp;
 
 	public void setUserId(int Userid) {
 		this.Userid = Userid;
@@ -40,26 +39,20 @@ public class ModelClass1 {
 		return rating;
 	}
 
-	public void setTimestamp(Date timestamp) {
+
+	public void setJunk(double junk) {
+		this.junk = junk;
+	}
+	
+	public double getJunk() {
+		return junk;
+	}
+
+	public void setTimestamp(String timestamp) {
 		this.timestamp = timestamp;
 	}
 
-	public Date getTimestamp() {
+	public String getTimestamp() {
 		return timestamp;
 	}
-
-	public static void main(String[] args) {
-		ModelClass1 m = new ModelClass1();
-		m.setUserId(111);
-		m.setMovieid(1);
-		m.setRating(3);
-		m.getTimestamp();
-
-		System.out.println(m.getUserId());
-		System.out.println(m.getMovieid());
-		System.out.println(m.getRating());
-		System.out.println(m.getTimestamp());
-
-	}
-
 }

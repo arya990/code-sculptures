@@ -5,6 +5,8 @@ public class LinkedListImplementation {
 
 	private int size;
 
+	// private int index;
+
 	public LinkedListImplementation() {
 		head = new Node();
 		head.setLink(null);
@@ -25,6 +27,7 @@ public class LinkedListImplementation {
 
 	public void clearList() {
 		head.setLink(null);
+		size = 0;
 	}
 
 	public void add(int data) {
@@ -46,13 +49,32 @@ public class LinkedListImplementation {
 		}
 	}
 
+	public void addAtPositiin(int data, int position) {
+		Node node = new Node(data);
+		if (size == 0) {
+			head.setLink(node);
+			node.setLink(null);
+			size++;
+		} else {
+			Node current = head;
+			Node previous = null;
+			for (int i = 0; i < size; i++) {
+				previous=current;
+				current=current.getLink();
+				if(current==null)
+					break;
+			}
+			current.setLink(node);;
+			previous.setLink(node);
+			size++;
+		}
+	}
+
 	public void removeAtEnd() {
 
 		if (size == 0) {
 			System.out.println("List is empty");
-
 		} else {
-
 			Node current = head;
 			Node link = head.getLink();
 			while (link != null) {
@@ -60,8 +82,45 @@ public class LinkedListImplementation {
 				link = link.getLink().getLink();
 			}
 			current.setLink(null);
+			size--;
 		}
+	}
 
+	public void removeAtPosition(int index) {
+		if (size == 0) {
+			System.out.println("List is empty");
+
+		} else {
+			Node current = head;
+			Node link = head.getLink();
+			Node previous = head;
+			Node temp = null;
+			for (int i = 0; i < size; i++) {
+				previous = current.getLink();
+				current = link;
+				link = link.getLink();
+				if (i == index) {
+					temp = current.getLink();
+					// previous=temp;
+					// previous.setLink(temp);
+					break;
+				}
+			}
+			// current=current.getLink();
+			previous.setLink(temp);
+			size--;
+		}
+	}
+
+	public boolean search(int x) {
+		Node current = head;
+		while (current != null) {
+			if (current.getData() == x) {
+				return true;
+			}
+			current = current.getLink();
+		}
+		return false;
 	}
 
 	public void printList() {
@@ -78,19 +137,25 @@ public class LinkedListImplementation {
 	}
 
 	public static void main(String[] args) {
-		try {
-			Thread.sleep(1000000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		// try {
+		// Thread.sleep(100);
+		// } catch (InterruptedException e) {
+		// e.printStackTrace();
+		// }
 		LinkedListImplementation list = new LinkedListImplementation();
 		list.printList();
 		list.add(1);
 		list.add(2);
 		list.add(3);
 		list.add(4);
+		// list.add(5);
 		list.printList();
+//		list.removeAtPosition(2);
+//		list.printList();
+		list.search(3);
 		list.removeAtEnd();
+		list.printList();
+		list.addAtPositiin(9,1 );
 		list.printList();
 
 	}
