@@ -17,7 +17,7 @@ public class Numberoflettersin1000 {
 				"sixhundred", "sevenhundred", "eighthundred", "ninehundred", "oneThousand" };
 		String number = " ";
 		int sum = 0;
-		for (int i = 666; i <= 666; i++) {
+		for (int i = 1; i <= 1000; i++) {
 			if (i <= 19) {
 				number = base[i];
 			} else if (i > 19 && i < 100) {

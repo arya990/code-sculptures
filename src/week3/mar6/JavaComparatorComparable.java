@@ -6,26 +6,26 @@ import java.util.Scanner;
 
 class Student implements Comparable<Student> {
 	int id;
-	String FirstName;
+	String firstName;
 	double CGPA;
 
 	Student(int id, String FirstName, double CGPA) {
 		this.id = id;
-		this.FirstName = FirstName;
-		this.CGPA = (Math.round(CGPA*100))/100;
+		this.firstName = FirstName;
+		this.CGPA = (Math.round(CGPA * 100)) / 100;
 	}
 
 	@Override
 	public int compareTo(Student st) {
 		if (CGPA == st.CGPA) {
-			if (FirstName == st.FirstName) {
+			if (firstName == st.firstName) {
 				if (id == st.id)
 					return 0;
 				else if (id > st.id)
 					return -1;
 				else
 					return 1;
-			} else if (FirstName.compareTo(st.FirstName) < 0)
+			} else if (firstName.compareTo(st.firstName) < 0)
 				return -1;
 			else
 				return 1;
@@ -37,7 +37,7 @@ class Student implements Comparable<Student> {
 	}
 }
 
-public class javaComparatorComparable {
+public class JavaComparatorComparable {
 
 	public static void main(String[] args) {
 
@@ -62,7 +62,7 @@ public class javaComparatorComparable {
 
 		Collections.sort(list);
 		for (Student st : list) {
-			System.out.println(st.id + " " + st.FirstName);
+			System.out.println(st.id + " " + st.firstName);
 		}
 		in.close();
 	}

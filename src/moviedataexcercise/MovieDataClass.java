@@ -7,12 +7,15 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+
 public class MovieDataClass {
 
 	public static void main(String[] args) {
 		
 		ArrayList<ModelData> datas=new ArrayList<ModelData>();
 		Set<Integer> list = new HashSet<Integer>();
+		Set<Integer> list1 = new HashSet<Integer>();
+		ArrayList<Double> list2 = new ArrayList<Double>();
 
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\basha\\Desktop\\Vote.txt"));
@@ -37,10 +40,15 @@ public class MovieDataClass {
 		}
 		for(ModelData a: datas){
 			list.add(a.getUserId());
-			System.out.println(a.getUserId());
+			list1.add(a.getMovieid());
+//			System.out.println(a.getUserId());
+			
 		}
 		 
+		System.out.println("number of unique users:"+list.size());
+		System.out.println("number of unique movies:"+list1.size());
 
+		
 	}
 
 }

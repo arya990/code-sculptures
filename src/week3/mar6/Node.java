@@ -1,8 +1,9 @@
 package week3.mar6;
 
 public class Node {
-	private int data;
-	private Node link;
+	int data;
+	Node link;
+	public Node n;
 
 	public Node() {
 

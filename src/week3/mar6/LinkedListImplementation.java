@@ -1,11 +1,9 @@
 package week3.mar6;
 
 public class LinkedListImplementation {
-	private Node head;
+	private static Node head;
 
 	private int size;
-
-	// private int index;
 
 	public LinkedListImplementation() {
 		head = new Node();
@@ -49,25 +47,34 @@ public class LinkedListImplementation {
 		}
 	}
 
-	public void addAtPositiin(int data, int position) {
-		Node node = new Node(data);
-		if (size == 0) {
-			head.setLink(node);
-			node.setLink(null);
-			size++;
-		} else {
-			Node current = head;
-			Node previous = null;
-			for (int i = 0; i < size; i++) {
-				previous=current;
-				current=current.getLink();
-				if(current==null)
-					break;
-			}
-			current.setLink(node);;
-			previous.setLink(node);
-			size++;
+	public Node addAtPositiin(Node head, int data, int position) {
+		Node node = new Node();
+		node.data = data;
+		Node link = null;
+		node.link = link;
+		if (head == null && position != 0) {
+			return head;
+		} else if (head == null && position == 0) {
+			head = node;
+			return head;
+		} else if (position == 0) {
+			node.n = head;
+			head = node;
+			return head;
+
 		}
+		Node current = head;
+		Node previous = null;
+		for (int i = 0; i < position; i++) {
+			previous = current;
+			current = current.getLink();
+			if (current == null)
+				break;
+		}
+		node.link = current;
+		previous.link = node;
+		size++;
+		return head;
 	}
 
 	public void removeAtEnd() {
@@ -79,48 +86,44 @@ public class LinkedListImplementation {
 			Node link = head.getLink();
 			while (link != null) {
 				current = link;
-				link = link.getLink().getLink();
+				link = link.getLink();
+				if (link.getLink().getLink() == null) {
+					current = link;
+					break;
+				}
 			}
 			current.setLink(null);
 			size--;
 		}
 	}
 
-	public void removeAtPosition(int index) {
+	public void removeAtPosition(int position) {
 		if (size == 0) {
 			System.out.println("List is empty");
 
 		} else {
 			Node current = head;
 			Node link = head.getLink();
-			Node previous = head;
-			Node temp = null;
-			for (int i = 0; i < size; i++) {
-				previous = current.getLink();
+			for (int i = 0; i < position - 1; i++) {
 				current = link;
 				link = link.getLink();
-				if (i == index) {
-					temp = current.getLink();
-					// previous=temp;
-					// previous.setLink(temp);
+				if (current == null)
 					break;
-				}
 			}
-			// current=current.getLink();
-			previous.setLink(temp);
+
+			current.setLink(link.getLink());
 			size--;
 		}
 	}
 
-	public boolean search(int x) {
+	public void search(int x) {
 		Node current = head;
 		while (current != null) {
 			if (current.getData() == x) {
-				return true;
+				System.out.println("number found");
 			}
 			current = current.getLink();
 		}
-		return false;
 	}
 
 	public void printList() {
@@ -148,14 +151,14 @@ public class LinkedListImplementation {
 		list.add(2);
 		list.add(3);
 		list.add(4);
-		// list.add(5);
+		list.add(5);
 		list.printList();
-//		list.removeAtPosition(2);
-//		list.printList();
+		list.removeAtPosition(2);
+		list.printList();
 		list.search(3);
 		list.removeAtEnd();
 		list.printList();
-		list.addAtPositiin(9,1 );
+		list.addAtPositiin(head, 9, 3);
 		list.printList();
 
 	}
