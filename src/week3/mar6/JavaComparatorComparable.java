@@ -4,6 +4,37 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+/*You are given a list of student information: ID, FirstName, and CGPA. Your task is to rearrange them according to their CGPA in decreasing order. If two student have the same CGPA, then arrange them according to their first name in alphabetical order. If those two students also have the same first name, then order them according to their ID. No two students have the same ID.
+Input Format
+The first line of input contains an integer , representing the total number of students. The next  lines contains a list of student information in the following structure: 
+ID Name CGPA
+Constraints
+The name contains only lowercase English letters. The  contains only integer numbers without leading zeros. The CGPA will contain, at most, 2 digits after the decimal point.
+Output Format
+After rearranging the students according to the above rules, print the id, first name of each student on a separate line.
+Sample Input
+7
+33 Manoj 3.75
+85 Rishap 3.70
+56 Kaushik 3.70
+19 Pradeep 3.70
+22 Prashanth 3.90
+78 Ismail 3.90
+37 Manoj 3.75
+
+
+
+Sample Output
+78 Ismail
+22 Prashanth
+33 Manoj
+37 Manoj
+56 Kaushik
+19 Pradeep
+85 Rishap
+Hint: Create a Student class bearing properties id (int), name (String) and cgpa (double). Create a list of Students type and store all the details into the list. Perform sort operations on cgpa property of the Student class in descending order, alphabetical order for name property, ascending order for id property. Use Comparator / Comparable on the student list to sort elements based on the requirement.
+
+*/
 class Student implements Comparable<Student> {
 	int id;
 	String firstName;
