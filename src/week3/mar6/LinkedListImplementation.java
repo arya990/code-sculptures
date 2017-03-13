@@ -1,5 +1,5 @@
 package week3.mar6;
-
+// Creating our own linked list
 public class LinkedListImplementation {
 	private static Node head;
 

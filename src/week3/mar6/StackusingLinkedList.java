@@ -1,5 +1,6 @@
 package week3.mar6;
 
+//Stack using Linked List
 public class StackusingLinkedList {
 	private static Node head;
 	private int size;
@@ -71,7 +72,7 @@ public class StackusingLinkedList {
 				temp = temp.getLink();
 			}
 		}
-		
+
 	}
 
 	public static void main(String[] args) {

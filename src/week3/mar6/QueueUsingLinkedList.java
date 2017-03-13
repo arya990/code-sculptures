@@ -1,5 +1,6 @@
 package week3.mar6;
 
+// Queue using stack
 public class QueueUsingLinkedList {
 
 	private static Node head;
@@ -21,8 +22,8 @@ public class QueueUsingLinkedList {
 	public int getSize() {
 		return this.size;
 	}
-	
-	public void enqueue(int data){
+
+	public void enqueue(int data) {
 		Node newNode = new Node(data);
 		if (size == 0) {
 			head.setLink(newNode);
@@ -40,21 +41,21 @@ public class QueueUsingLinkedList {
 			size++;
 		}
 	}
-	
+
 	@SuppressWarnings("null")
-	public int dequeue(){
-		if(isEmpty()){
+	public int dequeue() {
+		if (isEmpty()) {
 			System.out.println("queue is empty");
 		}
-		 Node link = head;
-	        head = link.getLink();        
-	        if (head == null)
-	             return (Integer) null;
-	        size-- ;        
-	        return link.getData();
+		Node link = head;
+		head = link.getLink();
+		if (head == null)
+			return (Integer) null;
+		size--;
+		return link.getData();
 	}
-	
-	public void displayQueue(){
+
+	public void displayQueue() {
 		if (size == 0)
 			System.out.println("queue is Empty");
 		else {
@@ -66,10 +67,10 @@ public class QueueUsingLinkedList {
 			}
 		}
 	}
-	
+
 	public static void main(String[] args) {
-		
-		QueueUsingLinkedList list= new QueueUsingLinkedList();
+
+		QueueUsingLinkedList list = new QueueUsingLinkedList();
 		list.displayQueue();
 		list.enqueue(1);
 		list.enqueue(2);
