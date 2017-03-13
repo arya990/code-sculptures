@@ -13,48 +13,49 @@ import java.util.List;
 public class ListOperations {
 
 	public static void main(String[] args) {
-		List<Integer> a = new ArrayList<Integer>(Arrays.asList(new Integer[] { 1, 2, 3, 4, 5, 6, 7 }));
+		List<Integer> list = new ArrayList<Integer>(Arrays.asList(new Integer[] { 1, 2, 3, 4, 5, 6, 7 }));
 		int sum = 0;
 
 		System.out.print("the sum of the list is:");
-		for (int i = 0; i < a.size(); i++) {
-			sum = sum + a.get(i);
+		for (int i = 0; i < list.size(); i++) {
+			sum = sum + list.get(i);
 		}
 		System.out.println(sum);
 
 		System.out.println("the reverse of the list is");
-		for (int i = a.size() - 1; i >= 0; i--) {
+		for (int i = list.size() - 1; i >= 0; i--) {
 			int rev = 0;
-			rev = a.get(i);
+			rev = list.get(i);
 			System.out.print(rev + " ");
 		}
 		System.out.println();
 
-		if (a.size() % 2 == 0) {
+		if (list.size() % 2 == 0) {
 			System.out.print("first half: ");
-			for (int i = 0; i < a.size() / 2 - 1; i++) {
-				System.out.print(a.get(i) + " ");
+			for (int i = 0; i < list.size() / 2 - 1; i++) {
+				System.out.print(list.get(i) + " ");
 			}
 			System.out.println();
-			System.out.println("middle numbers are: " + a.get(a.size() / 2 - 1) + "  " + a.get(a.size() / 2));
+			System.out
+					.println("middle numbers are: " + list.get(list.size() / 2 - 1) + "  " + list.get(list.size() / 2));
 			System.out.print("the second half is: ");
-			for (int i = a.size() / 2 + 1; i < a.size(); i++) {
-				System.out.print(a.get(i) + "  ");
+			for (int i = list.size() / 2 + 1; i < list.size(); i++) {
+				System.out.print(list.get(i) + "  ");
 			}
 		} else {
 			System.out.print("first half is:");
-			for (int i = 0; i < a.size() / 2; i++) {
-				System.out.print(a.get(i) + "  ");
+			for (int i = 0; i < list.size() / 2; i++) {
+				System.out.print(list.get(i) + "  ");
 			}
 			System.out.println();
-			System.out.println("middle number is: " + a.get(a.size() / 2));
+			System.out.println("middle number is: " + list.get(list.size() / 2));
 			System.out.print("the second half is: ");
-			for (int i = a.size() / 2 + 1; i < a.size(); i++) {
-				System.out.print(a.get(i) + "  ");
+			for (int i = list.size() / 2 + 1; i < list.size(); i++) {
+				System.out.print(list.get(i) + "  ");
 			}
 		}
 		System.out.println();
-		System.out.println("the head element is :" + a.get(0));
-		System.out.println("the tail element is: " + a.get(a.size() - 1));
+		System.out.println("the head element is :" + list.get(0));
+		System.out.println("the tail element is: " + list.get(list.size() - 1));
 	}
 }

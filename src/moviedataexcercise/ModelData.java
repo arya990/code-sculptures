@@ -39,11 +39,10 @@ public class ModelData {
 		return rating;
 	}
 
-
 	public void setJunk(double junk) {
 		this.junk = junk;
 	}
-	
+
 	public double getJunk() {
 		return junk;
 	}

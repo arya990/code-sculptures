@@ -7,9 +7,9 @@ public class VehicleObject {
 			return null;
 		} else if (type.equalsIgnoreCase("bike")) {
 			return new Bike();
-		} else if ( type.equalsIgnoreCase("car")){
+		} else if (type.equalsIgnoreCase("car")) {
 			return new Car();
-		} 
+		}
 		return null;
 	}
 }
