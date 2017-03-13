@@ -1,8 +1,8 @@
 package designpattern.abstractfactorypattern;
 
-public class Toyota implements CompanyInterface{
+public class Toyota implements CompanyInterface {
 	@Override
-	public void company(){
+	public void company() {
 		System.out.println("toyota");
 	}
 }

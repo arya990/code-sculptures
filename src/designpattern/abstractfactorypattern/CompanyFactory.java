@@ -15,6 +15,6 @@ public class CompanyFactory extends AbstractFactory {
 		} else if (type.equalsIgnoreCase("bajaj")) {
 			return new Bajaj();
 		}
-		return null; 
+		return null;
 	}
 }
