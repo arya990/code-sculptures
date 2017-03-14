@@ -5,6 +5,12 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+/*
+ * wc command in linux tells you number of 
+ * bytes,chars,words and lines in a file. 
+ * Write code in java/python to find the same 
+ * by taking file as input.
+ */
 public class WordCount {
 
 	public static void main(String[] args) {
@@ -23,7 +29,7 @@ public class WordCount {
 					if (line.charAt(i) != ' ' && line.charAt(i) != '\n')
 						chars++;
 				}
-				words =words + new StringTokenizer(line, " ,").countTokens();
+				words = words + new StringTokenizer(line, " ").countTokens();
 			}
 
 			System.out.println("Number of lines: " + lines);
