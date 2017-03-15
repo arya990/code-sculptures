@@ -64,7 +64,6 @@ class Student implements Comparable<Student> {
 			return -1;
 		else
 			return 1;
-
 	}
 }
 
