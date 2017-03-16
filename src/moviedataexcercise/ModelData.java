@@ -1,5 +1,6 @@
 package moviedataexcercise;
 
+
 /*You are given following Data points:
 		Userid
 		Movieid
@@ -7,20 +8,36 @@ package moviedataexcercise;
 		timestamp
 		Model  a class based on above parameters
 		*/
-public class ModelData {
+public class ModelData implements Comparable<ModelData> {
 
-	private int Userid;
+	private int userid;
 	private int movieid;
 	private double rating;
 	private double junk;
 	private String timestamp;
 
-	public void setUserId(int Userid) {
-		this.Userid = Userid;
+	public ModelData() {
+		userid = 0;
+		movieid = 0;
+		rating = 0.0;
+		junk = 0.0;
+		timestamp = " ";
+	}
+
+	public ModelData(int userid, int movieid, double rating, double junk, String timestamp) {
+		this.userid = userid;
+		this.rating = rating;
+		this.movieid = movieid;
+		this.junk = junk;
+		this.timestamp = timestamp;
+	}
+
+	public void setUserId(int userid) {
+		this.userid = userid;
 	}
 
 	public int getUserId() {
-		return Userid;
+		return userid;
 	}
 
 	public void setMovieid(int movieid) {
@@ -54,4 +71,14 @@ public class ModelData {
 	public String getTimestamp() {
 		return timestamp;
 	}
+
+	public int compareTo(ModelData a) {
+		if (rating == a.rating)
+			return 0;
+		else if (rating > a.rating)
+			return -1;
+		else  
+			return 1;
+	}
+	
 }
