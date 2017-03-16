@@ -1,7 +1,6 @@
 package moviedataexcercise;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,17 +12,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonSyntaxException;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.MalformedJsonException;
 
 public class MovieDataClass {
 
-	public static void main(String[] args) throws MalformedJsonException {
+	public static void main(String[] args) {
 
 		ArrayList<ModelData> datas = new ArrayList<ModelData>();
 		Set<Integer> list1 = new HashSet<Integer>();
@@ -132,33 +124,8 @@ public class MovieDataClass {
 		for (int i = 0; i < 10; i++) {
 			System.out.print(list6.get(i) + "  ");
 		}
-		txtToJson();
+//		txtToJson();
 	}
 
-	public static void txtToJson() {
-
-		try {
-			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\basha\\Desktop\\Vote.txt"));
-
-			String line = " ";
-			while ((line = br.readLine()) != null) {
-				JsonObject jsonObject = new JsonObject();
-
-				try {
-					JsonParser parser = new JsonParser();
-					JsonElement jsonElement = parser.parse(new FileReader("C:\\Users\\basha\\Desktop\\Vote.txt"));
-					jsonObject = jsonElement.getAsJsonObject();
-					System.out.println(jsonElement);
-				} catch (FileNotFoundException e) {
-					throw new JsonSyntaxException(e);
-				} catch (IOException e) {
-					throw new JsonIOException(e);
-				} catch (NumberFormatException e) {
-					throw new JsonSyntaxException(e);
-				}
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+	
 }
