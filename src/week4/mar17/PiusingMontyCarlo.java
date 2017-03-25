@@ -7,14 +7,14 @@ public class PiusingMontyCarlo {
 		int hits = 0;
 		// int limit = Integer.MAX_VALUE;
 
-		for (int i = 0; i < 100000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			x = Math.random();
 			y = Math.random();
 			if (x * x + y * y <= 1)
 				hits++;
 		}
 
-		System.out.println(4.0 * hits / 100000);
+		System.out.println(4.0 * hits / 1000);
 		System.out.println(Math.PI);
 
 	}
