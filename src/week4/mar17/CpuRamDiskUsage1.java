@@ -9,8 +9,10 @@ import java.lang.reflect.Modifier;
 public class CpuRamDiskUsage1 {
 	public static void main(String[] args) {
 		CpuRamDiskUsage1 cpuRamDiskUsage1 = new CpuRamDiskUsage1();
+		int i=0;
+		while(i<10){
 		cpuRamDiskUsage1.printUsage();
-
+		}
 	}
 
 	private void printUsage() {
