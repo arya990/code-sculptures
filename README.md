@@ -71,7 +71,7 @@ Further various core java concepts have also been covered n programs such as
 * Collections Framework covering 
  * ArrayList
  * List
- * HaspMp
+ * HashMap
  * Maps
  * Map.entry
  * Sets
