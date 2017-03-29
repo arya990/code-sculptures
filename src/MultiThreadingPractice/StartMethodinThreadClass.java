@@ -6,20 +6,19 @@ package MultiThreadingPractice;
  *  here thread is not created becasue thread is created when the thread class start() is called not parents class.
  *  so it is not recommened to override the start() as thread will not be created.
  */
-public class StartMethodinThreadClass {
+class ThreadDemo3 {
 	public void start() {
 		for (int i = 0; i < 10; i++) {
 			System.out.println("user thread");
 		}
 	}
-
-	static class ThreadDemo3 {
+}
+public class StartMethodinThreadClass {
 		public static void main(String[] args) {
-			StartMethodinThreadClass t3 = new StartMethodinThreadClass();
+			ThreadDemo3 t3 = new ThreadDemo3();
 			t3.start();
 			for (int i = 0; i < 10; i++) {
 				System.out.println("main thread");
 			}
 		}
 	}
-}

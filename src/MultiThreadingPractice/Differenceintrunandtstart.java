@@ -6,7 +6,7 @@ package MultiThreadingPractice;
  * t.start()		 thread start executed user thread is created
  * t.run()			run() will be executed just like a normal method call. so thread is not created.
  */
-public class Differenceintrunandtstart extends Thread {
+class ThreadDemo1 extends Thread {
 	public void run() {
 		for (int i = 0; i < 10; i++) {
 			System.out.println("user thread");
@@ -14,9 +14,9 @@ public class Differenceintrunandtstart extends Thread {
 	}
 }
 
-class ThreadDemo1 {
+public class Differenceintrunandtstart {
 	public static void main(String[] args) {
-		Differenceintrunandtstart t1 = new Differenceintrunandtstart();
+		ThreadDemo1 t1 = new ThreadDemo1();
 		t1.run();
 		for (int i = 0; i < 10; i++) {
 			System.out.println("main thread");

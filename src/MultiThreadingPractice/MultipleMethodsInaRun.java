@@ -1,7 +1,7 @@
 package MultiThreadingPractice;
 
 //so for ultiple methods to run at a  time call all methods inside the run().
-public class MultipleMethodsInaRun extends Thread {
+class ThreadDemo extends Thread {
 	public void run() {
 		m1();
 		m2();
@@ -22,9 +22,9 @@ public class MultipleMethodsInaRun extends Thread {
 
 }
 
-class ThreadDemo {
+public class MultipleMethodsInaRun {
 	public static void main(String[] args) {
-		MultipleMethodsInaRun t5 = new MultipleMethodsInaRun();
+		ThreadDemo t5 = new ThreadDemo();
 		t5.start();
 	}
 }
