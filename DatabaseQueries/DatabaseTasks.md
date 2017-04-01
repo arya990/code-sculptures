@@ -4,7 +4,7 @@
   
 ### **March 22nd:** ###  
   
-#### **1) Write a query to get a list of employee who have a one part name?** ####  
+#### **1) Write a query to get a list of employee who have a one part name?** ####
 
 	```sql
 	SELECT * 
@@ -326,3 +326,10 @@
 	```mysql
 
   	```
+
+#### Write a query to list all names from tblemployees
+
+```sql
+select name from tblemployees;
+```
+
