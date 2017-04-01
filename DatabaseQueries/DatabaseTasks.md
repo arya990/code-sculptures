@@ -6,21 +6,21 @@
   
 #### **1) Write a query to get a list of employee who have a one part name?** ####
 
-	```sql
+```sql
 	SELECT * 
 	FROM (SELECT SUBSTRING_INDEX(Name,' ',1) AS fName,
 	SUBSTRING_INDEX(SUBSTRING_INDEX(Name,' ',2),' ',-1) AS mName,
 	SUBSTRING_INDEX(Name,' ',-1) AS lName FROM tblemployees) as Name_Ram
 	WHERE (mName=' ' AND lName=' ');
-	```
+```
 
 #### **2) Write a query to get a list of employee who have a three part name?** ####  
 
-	```mysql
+```mysql
 	SELECT Name 
 	FROM tblemployees
 	WHERE Name regexp '^[^ ]+[ ]+[^ ]+[ ]+[^ ]+$';
-	```
+```
 
 #### **3) Write a query to get a list of employee who have a first, middle or last name as Ram and not anything else?** ####  
  
@@ -327,9 +327,5 @@
 
   	```
 
-#### Write a query to list all names from tblemployees
 
-```sql
-select name from tblemployees;
-```
 
