@@ -6,7 +6,7 @@
   
 #### **1) Write a query to get a list of employee who have a one part name?** ####  
 
-	```mysql
+	```sql
 	SELECT * 
 	FROM (SELECT SUBSTRING_INDEX(Name,' ',1) AS fName,
 	SUBSTRING_INDEX(SUBSTRING_INDEX(Name,' ',2),' ',-1) AS mName,
