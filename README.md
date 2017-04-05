@@ -47,7 +47,7 @@ This Repository also consists of projects which i have been doing. The list of p
 20. [Converting a text to Pig Latin format](https://github.com/arya990/code-sculptures/blob/master/src/week1/numberoperations/PigLatin.java)   
 21. [Consecutive Armstrong Numbers](https://github.com/arya990/code-sculptures/blob/master/src/week1/numberoperations/ArmstrongConsecutive.java)   
 22. [Addition of all digits of a Mersen's Prime number](https://github.com/arya990/code-sculptures/blob/master/src/week1/numberoperations/MersensPrimeaddition.java)   
-23. [Finding PI value using Monte Carlo Simulation] (https://github.com/arya990/code-sculptures/blob/master/src/week4/mar17/PiusingMontyCarlo.java)   
+23. [Finding PI value using Monte Carlo Simulation](https://github.com/arya990/code-sculptures/blob/master/src/week4/mar17/PiusingMontyCarlo.java)   
 24. [Number which gives the same digits when multiplied by 2,3,4,5,6](https://github.com/arya990/code-sculptures/blob/master/src/week1/numberoperations/NumberDivBy23456.java) and more..    
 
 ## **Java Basics, OOPS concepts and Core Java:** ##  
