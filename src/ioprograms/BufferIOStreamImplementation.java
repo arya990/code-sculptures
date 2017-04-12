@@ -11,8 +11,8 @@ import java.io.IOException;
 //BufferIOStreamImplementation
 public class BufferIOStreamImplementation {
 
-	@SuppressWarnings({ "resource", "deprecation" })
-	public static void main(String[] args) throws FileNotFoundException {
+	@SuppressWarnings({ "deprecation" })
+	public static void main(String[] args) throws FileNotFoundException, IOException {
 
 		try {
 			BufferedInputStream bis = new BufferedInputStream(
@@ -22,6 +22,7 @@ public class BufferIOStreamImplementation {
 				while (dis.available() != 0) {
 					System.out.println(dis.readLine());
 				}
+				bis.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

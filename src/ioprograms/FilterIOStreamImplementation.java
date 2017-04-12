@@ -11,7 +11,6 @@ import java.io.IOException;
 //FilterIOStreamImplementation
 public class FilterIOStreamImplementation {
 
-	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 		int i = 0;
 		char c;
@@ -21,6 +20,7 @@ public class FilterIOStreamImplementation {
 				c = (char) i;
 				System.out.print(c);
 			}
+			fis.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

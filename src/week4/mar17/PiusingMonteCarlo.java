@@ -1,6 +1,7 @@
 package week4.mar17;
+
 //finding pi value using montey carlo 
-public class PiusingMontyCarlo {
+public class PiusingMonteCarlo {
 
 	public static void main(String[] args) {
 		double x, y;

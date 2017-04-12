@@ -20,7 +20,7 @@ public class PipedIOStreamImplememtation {
 				System.out.println(" " + (char) inputStream.read());
 			}
 			inputStream.close();
-
+			outputStream.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

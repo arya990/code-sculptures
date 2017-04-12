@@ -13,7 +13,27 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class MovieDataClass {
+/*
+ * As Explained there’s a file  Vote.txt in data_and_logistics directory. Which is tab separated. It has following data points
+UserId
+MovieId
+Rating
+Junk
+TimeStamp
+
+Based on above data complete following tasks
+
+Model a class in Java/Python to suit the data
+Read the file using the modelled class and 
+Find total number of Unique Users
+Find total number of Unique Movies
+Find  10 Movies with Highest Rating
+Find 10 Movies with Lowest Rating
+Find 10 Users who watched most movies
+Find 10 Users who watched less movies
+
+ */
+public class MovieDataReview {
 
 	public static void main(String[] args) {
 
@@ -124,8 +144,7 @@ public class MovieDataClass {
 		for (int i = 0; i < 10; i++) {
 			System.out.print(list6.get(i) + "  ");
 		}
-//		txtToJson();
-	}
+		System.out.println();
 
-	
+	}
 }

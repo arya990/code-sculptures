@@ -24,6 +24,7 @@ public class StringReaderWriterImplementation {
 		stringWriter.write(s);
 
 		System.out.println(" " + stringWriter.toString());
+		str.close();
 	}
 
 }
