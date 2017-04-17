@@ -1,11 +1,11 @@
 package readingdifferentfileformats;
 
-import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
-import java.util.Iterator;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -15,57 +15,68 @@ import com.google.gson.JsonParser;
 
 public class ReadingGOTJsonFile {
 
+	public static final String delimiter = ",";
+	public static final String new_line = "\n";
+	public static final String Header = "id,url,name,season,number,airdate,airstamp,airtime,runtime,summary";
+
 	public static void main(String[] args) {
 
-		JsonParser jsonParser = new JsonParser();
-
+		JsonParser parser = new JsonParser();
+		List<GotClassFile> l = new ArrayList<GotClassFile>();
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("E:\\workspace\\textfile\\got.json"));
-			String line;
-			while ((line = br.readLine()) != null) {
-				JsonObject jsonObject = (JsonObject) jsonParser.parse(line);
-				// System.out.println(jsonObject);
+			JsonElement jElement = parser.parse(new FileReader(new File("E:\\workspace\\textfile\\got.json")));
+			JsonObject jObject = jElement.getAsJsonObject();
+			JsonObject embedded = jObject.get("_embedded").getAsJsonObject();
+			JsonArray episodes = embedded.get("episodes").getAsJsonArray();
 
-				Gson gson = new GsonBuilder().setPrettyPrinting().create();
-				String prettyJson = gson.toJson(jsonObject);
+			// System.out.println(jObject);
+			// System.out.println(embedded);
+			// System.out.println(episodes.size());
 
-				System.out.println(prettyJson);
+			for (JsonElement episode : episodes) {
+				JsonObject jsonObject = episode.getAsJsonObject();
 
-//				JsonArray jsonArray = jsonObject.getAsJsonArray("season");
-//				for (int i = 0; i < jsonArray.size(); i++) {
-//					JsonObject object = jsonArray.getAsJsonObject(i);
-//					
-//				}
-//				System.out.println(jsonArray);
-				
-//				Iterator iterator=jsonArray.iterator();
-//                int i=0;
-//             while iterator(hasNext()) 
-//               {
-//               JsonObject object=(JsonObject) iterator.next();
-//                 System.out.println(object);
-//                i++;
-//               }
-//              System.out.println("length of json array is :"+i);
-				
-              
-              
-//				 JsonElement count = jsonObject.get("season");
-//				 System.out.println(count);
-				 
-//				JsonObject job = gson.fromJson(prettyJson, JsonObject.class);
-//				JsonElement entry=job.getAsJsonObject("_embedded").getAsJsonArray("episodes");
-//
-//				String str = entry.toString();
-//
-//				System.out.println(str);
-				 
-				 
+				GotClassFile classFile = new GotClassFile(jsonObject.get("id").getAsString(),
+						jsonObject.get("url").getAsString(), jsonObject.get("name").getAsString(),
+						jsonObject.get("season").getAsString(), jsonObject.get("number").getAsString(),
+						jsonObject.get("airdate").getAsString(), jsonObject.get("airstamp").getAsString(),
+						jsonObject.get("airtime").getAsString(), jsonObject.get("runtime").getAsString(),
+						jsonObject.get("summary").toString());
+				l.add(classFile);
 			}
-			br.close();
 
+			FileWriter fileWriter = new FileWriter(new File("E:\\workspace\\textfile\\Got.csv"));
+			fileWriter.append(Header);
+			fileWriter.append(new_line);
+
+			for (GotClassFile f : l) {
+
+				fileWriter.append("\"" + f.getId() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getUrl() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getName() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getSeason() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getNumber() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getAirdate() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getAirstamp() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getAirtime() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getRuntime() + "\"");
+				fileWriter.append(delimiter);
+				fileWriter.append("\"" + f.getsummary() + "\"");
+				fileWriter.append(new_line);
+
+			}
+			fileWriter.close();
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		}
 	}
 
